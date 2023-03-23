@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main()
 {
     printf("Aluno: Paulo Vinicius de Freitas Rodrigues \n");
@@ -8,3 +9,4 @@ int main()
 
     return 0;
 }
+
