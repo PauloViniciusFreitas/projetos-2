@@ -5,7 +5,7 @@ typedef struct {
     float real;
     float imag;
 } complex;
-
+/// Essa função fará a transposição de uma matriz. Perceba que, dentro do segundo laço for, linhas e colunas trocarão de lugar.
 void transposta(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -16,7 +16,7 @@ void transposta(complex** a, complex** result, int l, int c) {
         }
     }
 }
-
+/// Essa função calcula o conjugado de uma matriz.
 void conjugada(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -27,7 +27,7 @@ void conjugada(complex** a, complex** result, int l, int c) {
         }
     }
 }
-
+/// Essa função calcula a hermitiana (igual a sua transposta conjugada).
 void hermitiana(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -38,7 +38,7 @@ void hermitiana(complex** a, complex** result, int l, int c) {
         }
     }
 }
-
+/// Essa função calcula a soma de duas matrizes complexas.
 void soma(complex** a, complex** b, complex** result, int l, int c) {
     int i, j;
 
@@ -49,7 +49,7 @@ void soma(complex** a, complex** b, complex** result, int l, int c) {
         }
     }
 }
-
+/// Essa função calcula a subtração de duas matrizes complexas.
 void subtracao(complex** a, complex** b, complex** result, int l, int c) {
     int i, j;
 
@@ -60,7 +60,7 @@ void subtracao(complex** a, complex** b, complex** result, int l, int c) {
         }
     }
 }
-
+/// Essa função calcula o produto escalar de duas matrizes.
 void produto_escalar(complex* a, complex* b, complex* result, int tam) {
     int i;
     complex temp = {0.0, 0.0};
@@ -72,6 +72,7 @@ void produto_escalar(complex* a, complex* b, complex* result, int tam) {
     result->real = temp.real;
     result->imag = temp.imag;
 }
+/// Essa função calcula o produto matricial de duas matrizes.
 void produto_matricial(complex** a, complex** b, complex** result, int l, int c, int m) {
     int i, j, k;
     complex temp;
@@ -88,7 +89,7 @@ void produto_matricial(complex** a, complex** b, complex** result, int l, int c,
         }
     }
 }
-
+/// Essa função demonstra dois exemplos para cada operação com matrizes de 3 linhas por 3 colunas e um vetor de 3 posições (pro caso do produto escalar).
 void dois_exemplos(void){
     int l, c, m, i, j;
     l=3;
@@ -503,7 +504,7 @@ void dois_exemplos(void){
     free(hermitiana_a);
     free(produto_matricial_a_b);
 }
-
+///Essa função executa todas as operações citadas ateriormente, mas com apenas um resultado.
 void teste_todos(void) {
     int l, c, m, i, j;
     l=3;
