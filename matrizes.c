@@ -1,3 +1,6 @@
+/// @file matrizes.c
+/// @brief Todas as implementações relacionadas a matrizes.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -5,7 +8,13 @@ typedef struct {
     float real;
     float imag;
 } complex;
-/// Essa função fará a transposição de uma matriz. Perceba que, dentro do segundo laço for, linhas e colunas trocarão de lugar.
+/// Essa função fará a transposição de uma matriz.
+
+/// @param a Matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas da matriz.
+/// @param c Número de colunas da matriz.
+
 void transposta(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -17,6 +26,12 @@ void transposta(complex** a, complex** result, int l, int c) {
     }
 }
 /// Essa função calcula o conjugado de uma matriz.
+
+/// @param a Matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas da matriz.
+/// @param c Número de colunas da matriz.
+
 void conjugada(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -28,6 +43,12 @@ void conjugada(complex** a, complex** result, int l, int c) {
     }
 }
 /// Essa função calcula a hermitiana (igual a sua transposta conjugada).
+
+/// @param a Matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas da matriz.
+/// @param c Número de colunas da matriz.
+
 void hermitiana(complex** a, complex** result, int l, int c) {
     int i, j;
 
@@ -39,6 +60,13 @@ void hermitiana(complex** a, complex** result, int l, int c) {
     }
 }
 /// Essa função calcula a soma de duas matrizes complexas.
+
+/// @param a Primeira matriz de entrada.
+/// @param b Segunda matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas das matrizes.
+/// @param c Número de colunas das matrizes.
+
 void soma(complex** a, complex** b, complex** result, int l, int c) {
     int i, j;
 
@@ -50,6 +78,13 @@ void soma(complex** a, complex** b, complex** result, int l, int c) {
     }
 }
 /// Essa função calcula a subtração de duas matrizes complexas.
+
+/// @param a Primeira matriz de entrada.
+/// @param b Segunda matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas das matrizes.
+/// @param c Número de colunas das matrizes.
+
 void subtracao(complex** a, complex** b, complex** result, int l, int c) {
     int i, j;
 
@@ -60,7 +95,13 @@ void subtracao(complex** a, complex** b, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula o produto escalar de duas matrizes.
+/// Essa função calcula o produto escalar de dois vetores complexos.
+
+/// @param a Primeiro vetor complexo de entrada.
+/// @param b Segundo vetor complexo de entrada.
+/// @param result Resultado do produto escalar (deve ser alocado antes da chamada).
+/// @param tam Tamanho dos vetores.
+
 void produto_escalar(complex* a, complex* b, complex* result, int tam) {
     int i;
     complex temp = {0.0, 0.0};
@@ -73,6 +114,14 @@ void produto_escalar(complex* a, complex* b, complex* result, int tam) {
     result->imag = temp.imag;
 }
 /// Essa função calcula o produto matricial de duas matrizes.
+
+/// @param a Primeira matriz de entrada.
+/// @param b Segunda matriz de entrada.
+/// @param result Matriz resultante (deve ser alocada antes da chamada).
+/// @param l Número de linhas da primeira matriz.
+/// @param c Número de colunas da primeira matriz e número de linhas da segunda matriz.
+/// @param m Número de colunas da segunda matriz.
+
 void produto_matricial(complex** a, complex** b, complex** result, int l, int c, int m) {
     int i, j, k;
     complex temp;
@@ -90,6 +139,7 @@ void produto_matricial(complex** a, complex** b, complex** result, int l, int c,
     }
 }
 /// Essa função demonstra dois exemplos para cada operação com matrizes de 3 linhas por 3 colunas e um vetor de 3 posições (pro caso do produto escalar).
+
 void dois_exemplos(void){
     int l, c, m, i, j;
     l=3;
