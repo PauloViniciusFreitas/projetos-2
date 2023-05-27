@@ -8,7 +8,7 @@ typedef struct {
     float real;
     float imag;
 } complex;
-/// Essa função fará a transposição de uma matriz.
+///A transposição de uma matriz envolve a troca de suas linhas pelas colunas correspondentes. Isso significa que o elemento (i, j) da matriz original será colocado como elemento (j, i) na matriz transposta.
 
 /// @param a Matriz de entrada.
 /// @param result Matriz resultante (deve ser alocada antes da chamada).
@@ -25,7 +25,7 @@ void transposta(complex** a, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula o conjugado de uma matriz.
+///A conjugada de uma matriz é obtida trocando o sinal da parte imaginária de cada elemento complexo da matriz.
 
 /// @param a Matriz de entrada.
 /// @param result Matriz resultante (deve ser alocada antes da chamada).
@@ -42,7 +42,7 @@ void conjugada(complex** a, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula a hermitiana (igual a sua transposta conjugada).
+///Uma matriz hermitiana é uma matriz complexa que é igual à sua matriz conjugada transposta. Isso significa que os elementos (i, j) da matriz original são iguais aos elementos (j, i) da matriz conjugada transposta.
 
 /// @param a Matriz de entrada.
 /// @param result Matriz resultante (deve ser alocada antes da chamada).
@@ -59,7 +59,7 @@ void hermitiana(complex** a, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula a soma de duas matrizes complexas.
+///Para somar duas matrizes complexas, você deve somar separadamente a parte real e a parte imaginária de cada elemento correspondente das matrizes. O resultado será uma nova matriz complexa com a soma das partes reais e a soma das partes imaginárias.
 
 /// @param a Primeira matriz de entrada.
 /// @param b Segunda matriz de entrada.
@@ -77,7 +77,7 @@ void soma(complex** a, complex** b, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula a subtração de duas matrizes complexas.
+///Para subtrair duas matrizes complexas, você deve subtrair separadamente a parte real e a parte imaginária de cada elemento correspondente das matrizes. O resultado será uma nova matriz complexa com a diferença das partes reais e a diferença das partes imaginárias.
 
 /// @param a Primeira matriz de entrada.
 /// @param b Segunda matriz de entrada.
@@ -95,7 +95,7 @@ void subtracao(complex** a, complex** b, complex** result, int l, int c) {
         }
     }
 }
-/// Essa função calcula o produto escalar de dois vetores complexos.
+///a operação de produto escalar entre dois vetores complexos consiste em multiplicar a parte real de A pelo correspondente da parte real de B, multiplicar a parte imaginária de A pelo correspondente da parte imaginária de B, subtrair a multiplicação das partes imaginárias de A e B da multiplicação das partes reais de A e B, e somar o resultado à variável temp.real. Além disso, deve-se multiplicar a parte real de A pelo correspondente da parte imaginária de B, multiplicar a parte imaginária de A pelo correspondente da parte real de B, e somar o resultado à variável temp.imag.
 
 /// @param a Primeiro vetor complexo de entrada.
 /// @param b Segundo vetor complexo de entrada.
@@ -113,7 +113,7 @@ void produto_escalar(complex* a, complex* b, complex* result, int tam) {
     result->real = temp.real;
     result->imag = temp.imag;
 }
-/// Essa função calcula o produto matricial de duas matrizes.
+///Para multiplicar duas matrizes complexas, você deve aplicar a regra geral de multiplicação de matrizes, considerando que os números complexos têm uma parte real e uma parte imaginária. Isso envolve multiplicar os elementos correspondentes, somar os produtos cruzados das partes reais e imaginárias e combiná-los para obter a parte real e a parte imaginária do resultado.
 
 /// @param a Primeira matriz de entrada.
 /// @param b Segunda matriz de entrada.
@@ -270,7 +270,6 @@ void dois_exemplos(void){
     }
 
     printf("\n");
-
 
     printf("======Teste da operacao Conjugada======\n");
     printf("Operando: A=\n");
