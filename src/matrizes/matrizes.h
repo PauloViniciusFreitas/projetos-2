@@ -78,6 +78,8 @@ void produto_escalar(complex* a, complex* b, complex* result, int tam);
 
 void produto_matricial(complex** a, complex** b, complex** result, int l, int c, int m);
 
+void calc_svd(void);
+
 /// @brief Executa dois exemplos de uso das funções.
 
 void dois_exemplos();
