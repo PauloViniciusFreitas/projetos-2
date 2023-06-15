@@ -5,21 +5,23 @@ aplicacao: biblioteca aplicacao_principal
 
 # Regra para compilar a biblioteca
 biblioteca:
-	gcc -c matrizes.c -o matrizes.o
+	mkdir -p build
+	gcc -c -I"C:\Users\filip\Downloads\usr\include" matrizes.c -o build/matrizes.o
 
 # Regra para compilar a aplicação principal
-aplicacao_principal:
-	gcc main.c matrizes.o -o aplicacao
+aplicacao_principal:  biblioteca
+	mkdir -p build
+	gcc main.c build/matrizes.o -L"C:\Users\filip\Downloads\lib" -lgsl -lm -o build/aplicacao
 
 # Regra para testar a aplicação
 teste: aplicacao
-	./aplicacao
+	./build/aplicacao
 
 # Regra para gerar a documentação em formato HTML usando o Doxygen
 doc:
+	mkdir -p doc
 	doxygen Doxyfile
 
 # Regra para limpar o repositório
 clean:
-	rm -f matrizes.o aplicacao
-	rm -rf html
+	rm -rf doc build
