@@ -11,7 +11,7 @@ biblioteca:
 # Regra para compilar a aplicação principal
 aplicacao_principal:  biblioteca
 	mkdir -p build
-	gcc main.c build/matrizes.o -L"C:\Users\filip\Downloads\lib" -lgsl -lm -o build/aplicacao
+	gcc src/matrizes/main.c build/matrizes.o -L"C:\Users\filip\Downloads\lib" -lgsl -lm -o build/aplicacao
 
 # Regra para testar a aplicação
 teste: aplicacao
