@@ -6,7 +6,7 @@ aplicacao: biblioteca aplicacao_principal
 # Regra para compilar a biblioteca
 biblioteca:
 	mkdir -p build
-	gcc -c -I"C:\Users\filip\Downloads\usr\include" matrizes.c -o build/matrizes.o
+	gcc -c -I"C:\Users\filip\Downloads\usr\include" src/matrizes/matrizes.c -o build/matrizes.o
 
 # Regra para compilar a aplicação principal
 aplicacao_principal:  biblioteca
