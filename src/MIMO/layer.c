@@ -3,7 +3,7 @@
 #include <complex.h>
 
 int *tx_data_read(char *filename, int *size) {
-    FILE *file = fopen(filename, "r");
+    FILE *file = fopen(filename, "a");
     if (file == NULL) {
         printf("Erro ao abrir o arquivo %s\n", filename);
         exit(1);
