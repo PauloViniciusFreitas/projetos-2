@@ -12,10 +12,12 @@ biblioteca:
 aplicacao_principal:  biblioteca
 	mkdir -p build
 	gcc src/matrizes/main.c build/matrizes.o -L"/usr/lib/x86_64-linux-gnu/" -lgsl -lm -o build/aplicacao
+	gcc src/MIMO/pds_telecom.c -L"/usr/lib/x86_64-linux-gnu/" -lgsl -lm -o build/pds_telecom
 
 # Regra para testar a aplicação
 teste: aplicacao
 	./build/aplicacao
+	./build/pds_telecom
 
 # Regra para gerar a documentação em formato HTML usando o Doxygen
 doc:
