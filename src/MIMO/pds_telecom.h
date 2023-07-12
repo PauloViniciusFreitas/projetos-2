@@ -1,5 +1,5 @@
 /// @file pds_telecom.h
-/// @brief Implementação de Sistema de Comunicação Digital MIMO.
+/// @brief declaração de funções relacionadas ao sistema MIMO
 
 #ifndef PDS_TELECOM_H
 #define PDS_TELECOM_H
