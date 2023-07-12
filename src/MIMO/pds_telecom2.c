@@ -364,6 +364,10 @@ int main(int argc, char *argv[]) {
 
     printf("\n");
 
+    printf("'Equipe':Filipe Correa da silva");
+
+    printf("\n");
+
     if (argc != 3) {
         printf("Uso: %s <arquivo de entrada> <arquivo de saída>\n", argv[0]);
         exit(1);
